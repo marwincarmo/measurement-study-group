@@ -61,7 +61,8 @@ This is a safe place to learn, ask questions and teach.
 </div>
 
 ```{r}
-plot(hist(mtcars$disp))
+toastui::calendar()
+
 ```
 
 
