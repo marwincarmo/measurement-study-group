@@ -16,3 +16,23 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+```{r, warning=FALSE, echo=FALSE}
+source(here::here("R", "functions.R"))
+```
+
+
+Add a description
+
+<div class="headers">
+<h1>Join us</h1>
+</div>
+
+Testing the cards function
+
+```{r}
+# teste
+as_card("Papers spreadsheet", 
+        "Click here to acess the spreadsheet of suggested readings",
+        link = 'https://docs.google.com/spreadsheets/d/1VUtka6tC1bZucqsJ-8pvOM78azqjYyrIS4Dt3tCtrdg/edit#gid=0')
+```
+
