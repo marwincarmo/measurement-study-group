@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-03T16:57:19-03:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Measuring Psychology",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\nAdd a description\r\n\r\n\r\nJoin us\r\n\r\n\r\nTesting the cards function\r\n\r\n\r\n\r\n\r\nReading list\r\nDescricao da planilha\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSign up\r\nDescricao do formulário\r\n\r\n\r\n\r\n\r\n\r\n\r\nCommunity\r\n\r\n\r\nWe are a group of people who are interested in measurement theory and psychometrics for psychology.\r\nWe are from all around the world, with different backgrounds (from undergraduate to Ph.D.’s; from academia and industry).\r\nThis is a safe place to learn, ask questions and teach.\r\n\r\n\r\nMeetings calendar\r\n\r\n\r\n\r\n\r\n\r\nToday\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n{\"x\":{\"options\":{\"defaultView\":\"month\",\"taskView\":false,\"scheduleView\":true,\"useDetailPopup\":true,\"useCreationPopup\":false,\"isReadOnly\":true,\"usageStatistics\":false},\"schedules\":[],\"navigation\":false,\"events\":[],\"navigationOptions\":{\"today_label\":\"Today\",\"prev_label\":\"<i class=\\\"fa fa-chevron-left\\\" role=\\\"presentation\\\" aria-label=\\\"chevron-left icon\\\"><\\/i>\",\"next_label\":\"<i class=\\\"fa fa-chevron-right\\\" role=\\\"presentation\\\" aria-label=\\\"chevron-right icon\\\"><\\/i>\",\"class\":\" bttn-bordered bttn-sm bttn-primary\",\"fmt_date\":\"YYYY-MM-DD\",\"sep_date\":\" ~ \"}},\"evals\":[],\"jsHooks\":[]}\r\n\r\n\r\nJoin our Slack channel\r\n\r\n\r\nLink to the channel\r\n\r\n\r\nAbout us\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-12-03T16:57:29-03:00"
+    }
+  ],
+  "collections": []
+}

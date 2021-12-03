@@ -1,12 +1,20 @@
 name: "measurement-study-group"
 title: "Measurement Study Group"
+theme: theme.css
 description: |
   Measurement Study Group
 output_dir: "_site"
+repository_url: https://github.com/marwincarmo/measurement-study-group
 navbar:
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-output: distill::distill_article
+  source_url: true
+output:
+  distill::distill_article:
+    includes:
+      in_header: assets/header.html
+      after_body: assets/_footer.html
+#    css: assets/styles.css

@@ -1,11 +1,6 @@
 ---
 title: "Measuring Psychology"
-output:
-  distill::distill_article:
-    includes:
-      in_header: assets/header.html
-      after_body: assets/_footer.html
-    css: assets/styles.css
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}

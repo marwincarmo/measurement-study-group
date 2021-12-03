@@ -26,6 +26,11 @@ body {
 }
 
 .distill-site-header {
+  --title-size:       18px;
+  --text-color:       black; /*rgba(255, 255, 255, 0.8);*/
+  --text-size:        18px;
+  --hover-color:      #ff4655; /*white;*/
+  --bkgd-color:       white; /*#0F2E3D;*/
 }
 
 .distill-site-footer {
@@ -48,12 +53,13 @@ d-title {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-  font-family: 'Helvetica';
+  font-family: 'Verdana', Sans-Serif;
 }
 
 .headers {
   padding-top: 2rem;
-  font-family: 'Helvetica';
+  font-family: 'Verdana', Sans-Serif;
+  color: #ff4655
 }
 
 .card {
