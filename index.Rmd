@@ -1,5 +1,5 @@
 ---
-title: "Measurement Study Group"
+title: "Measuring Psychology"
 output:
   distill::distill_article:
     includes:
@@ -31,8 +31,50 @@ Testing the cards function
 
 ```{r}
 # teste
-as_card("Papers spreadsheet", 
-        "Click here to acess the spreadsheet of suggested readings",
-        link = 'https://docs.google.com/spreadsheets/d/1VUtka6tC1bZucqsJ-8pvOM78azqjYyrIS4Dt3tCtrdg/edit#gid=0')
+as_card(group_name = "Reading list",
+        event_name = "Descricao da planilha",
+        img_src = "images/google_sheets.svg",
+        link = 'https://docs.google.com/spreadsheets/d/1VUtka6tC1bZucqsJ-8pvOM78azqjYyrIS4Dt3tCtrdg/edit#gid=0'
+        )
 ```
 
+```{r}
+as_card(group_name = "Sign up",
+        event_name = "Descricao do formulário",
+        img_src = "images/google_forms.svg",
+        link = 'https://forms.gle/LhhBVLEX5C9Ybnta8'
+        )
+```
+
+<div class="headers">
+<h1>Community</h1>
+</div>
+
+We are a group of people who are interested in measurement theory and psychometrics for psychology.
+
+We are from all around the world, with different backgrounds (from undergraduate to Ph.D.'s; from academia and industry).
+
+This is a safe place to learn, ask questions and teach.
+
+<div class="headers">
+<h1>Meetings calendar</h1>
+</div>
+
+```{r}
+plot(hist(mtcars$disp))
+```
+
+
+<div class="headers">
+<h1>Join our Slack channel</h1>
+</div>
+
+Link to the channel
+
+<div class="headers">
+<h1>About us</h1>
+</div>
+
+```{r}
+plot(hist(mtcars$disp))
+```
