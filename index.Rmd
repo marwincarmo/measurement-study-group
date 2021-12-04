@@ -43,11 +43,27 @@ as_card(group_name = "Sign up",
 <h1>Community</h1>
 </div>
 
-We are a group of people who are interested in measurement theory and psychometrics for psychology.
+```{r, layout="l-screen-inset"}
+library(leaflet)
+map_data <- readr::read_csv("assets/map_data.csv")
+# calculate center point for setting zoom
+bbox <- ggmap::make_bbox(map_data$longitude, map_data$latitude)
+lon <- sum(bbox[c(1, 3)]) / 2
+lat <- sum(bbox[c(2, 4)]) / 2
 
-We are from all around the world, with different backgrounds (from undergraduate to Ph.D.'s; from academia and industry).
+map_data %>% 
+        leaflet() %>%
+        setView(lon, lat, zoom =1) %>% 
+        addTiles() %>% 
+        addMarkers(lng = ~longitude, lat = ~latitude, 
+                popup = paste0(
+                '<b>Contry:</b> ',map_data$university, '<br>',
+                '<b>Participants:</b> ', map_data$n, '<br>'
+                ),
+                clusterOptions = markerClusterOptions()
+        )
+```
 
-This is a safe place to learn, ask questions and teach.
 
 <div class="headers">
 <h1>Meetings calendar</h1>

@@ -1,0 +1,98 @@
+id,university,country,addr,latitude,longitude,n,prop
+1,Universidade Federal do Espírito Santo,Brazil,"Universidade Federal do Espírito Santo, Brazil",-20.306770324707,-40.3062286376953,1,1.0309278350515463
+2,Friedrich Schiller University,Germany,"Friedrich Schiller University, Germany",27.9189796447754,-82.7855377197266,1,1.0309278350515463
+3,University of British Columbia,Canada,"University of British Columbia, Canada",49.9404335021973,-119.395805358887,1,1.0309278350515463
+4,Ankara Yıldırım Beyazıt university,Turkey,"Ankara Yıldırım Beyazıt university, Turkey",40.19389,32.68911,1,1.0309278350515463
+5,Indiana University,United States,"Indiana University, United States",39.175121307373,-86.5169982910156,1,1.0309278350515463
+6,University of Southern California,United States,"University of Southern California, United States",34.0214958190918,-118.28678894043,1,1.0309278350515463
+7,University of New Mexico,United States,"University of New Mexico, United States",35.0837593078613,-106.620079040527,1,1.0309278350515463
+8,University of Iowa,United States,"University of Iowa, United States",41.6621360778809,-91.5579147338867,2,2.0618556701030926
+9,University of Georgia,United States,"University of Georgia, United States",33.9585304260254,-83.3743515014648,1,1.0309278350515463
+10,Yildiz technical university,Turkey,"Yildiz technical university, Turkey",37.28588,27.78043,1,1.0309278350515463
+11,New York University,United States,"New York University, United States",40.7304573059082,-73.9985275268555,2,2.0618556701030926
+12,Monk Prayogshala,India,"Monk Prayogshala, India",22.3525123596191,79.3636856079102,1,1.0309278350515463
+13,California Institute of Technology,United States,"California Institute of Technology, United States",34.1376647949219,-118.125381469727,1,1.0309278350515463
+14,Universidad Nacional Autónoma de México,Mexico,"Universidad Nacional Autónoma de México, Mexico",19.3217334747314,-99.1854934692383,1,1.0309278350515463
+15,University of Limpopo,South Africa,"University of Limpopo, South Africa",-23.8876895904541,29.738805770874,1,1.0309278350515463
+16,University of Alicante,Spain,"University of Alicante, Spain",38.3846397399902,-0.513146996498108,1,1.0309278350515463
+17,The University of Iowa,United States,"The University of Iowa, United States",41.6621360778809,-91.5579147338867,1,1.0309278350515463
+18,Chinese University of Hong Kong,Hong Kong,"Chinese University of Hong Kong, Hong Kong",22.2794408529453,114.161892749694,1,1.0309278350515463
+19,University of Amsterdam,Netherlands,"University of Amsterdam, Netherlands",52.3685417175293,4.89021587371826,1,1.0309278350515463
+20,University College London,United Kingdom,"University College London, United Kingdom",51.5238151550293,-0.133059993386269,1,1.0309278350515463
+21,Uni7,Brazil,"Uni7, Brazil",-10.3333330154419,-53.2000007629395,1,1.0309278350515463
+22,George Mason University,United States,"George Mason University, United States",38.8325576782227,-77.2997589111328,1,1.0309278350515463
+23,University of Silesia in Katowice,Poland,"University of Silesia in Katowice, Poland",50.2586059570312,19.0204200744629,1,1.0309278350515463
+24,SWPS University of Social Sciences and Humanities,Poland,"SWPS University of Social Sciences and Humanities, Poland",52.1246681213379,19.400426864624,1,1.0309278350515463
+25,Cornell University,United States,"Cornell University, United States",42.4336242675781,-76.4653930664062,1,1.0309278350515463
+26,Delft University of Technology,Netherlands,"Delft University of Technology, Netherlands",51.9975738525391,4.37514686584473,1,1.0309278350515463
+27,Northeast Normal University,China,"Northeast Normal University, China",43.863899230957,125.325180053711,1,1.0309278350515463
+28,University of Houston Clear Lake,United States,"University of Houston Clear Lake, United States",29.5799674987793,-95.0996475219727,1,1.0309278350515463
+29,London Business School,United Kingdom,"London Business School, United Kingdom",51.5260887145996,-0.160999000072479,1,1.0309278350515463
+30,University of Alabama,United States,"University of Alabama, United States",33.2106285095215,-87.5402603149414,2,2.0618556701030926
+31,University of the Philippines Mindanao,Philippines,"University of the Philippines Mindanao, Philippines",14.44653,120.50155,1,1.0309278350515463
+32,Flinders University,Australia,"Flinders University, Australia",-38.4739303588867,145.018966674805,1,1.0309278350515463
+33,Waseda University,Japan,"Waseda University, Japan",35.7066802978516,139.722320556641,1,1.0309278350515463
+34,Stanford University,United States,"Stanford University, United States",37.4315643310547,-122.163627624512,1,1.0309278350515463
+35,University of Braunschweig,Germany,"University of Braunschweig, Germany",52.2641525268555,10.5264234542847,1,1.0309278350515463
+36,University of Social Sciences,Poland,"University of Social Sciences, Poland",52.1246681213379,19.400426864624,1,1.0309278350515463
+37,University of the Philippines Diliman,Philippines,"University of the Philippines Diliman, Philippines",14.45063,120.50013,1,1.0309278350515463
+38,University of Delhi,India,"University of Delhi, India",28.6900005340576,77.2099990844727,1,1.0309278350515463
+39,University of Iowa,United States,"University of Iowa, United States",41.6621360778809,-91.5579147338867,2,2.0618556701030926
+40,James Madison University,United States,"James Madison University, United States",38.4346504211426,-78.8675765991211,1,1.0309278350515463
+41,Alliant International University,United States,"Alliant International University, United States",36.7659797668457,-119.720008850098,2,2.0618556701030926
+42,Amity University Kolkata,India,"Amity University Kolkata, India",22.5955944061279,88.4880447387695,1,1.0309278350515463
+43,Universidad de los Andes,Chile,"Universidad de los Andes, Chile",-32.83787,-70.59988,1,1.0309278350515463
+44,Universidad San Ignacio de Loyola,Peru,"Universidad San Ignacio de Loyola, Peru",-11.97459,-77.07955,1,1.0309278350515463
+45,University of Toronto,Canada,"University of Toronto, Canada",43.6642761230469,-79.397575378418,1,1.0309278350515463
+46,Masaryk University Brno,Czech Republic,"Masaryk University Brno, Czech Republic",49.1920509338379,16.6131916046143,1,1.0309278350515463
+47,State University of New York (Albany),United States,"State University of New York (Albany), United States",39.5035552978516,-99.0183029174805,1,1.0309278350515463
+48,University of Florida,United States,"University of Florida, United States",29.641429901123,-82.3564834594727,1,1.0309278350515463
+49,Catholic University of Croatia,Croatia,"Catholic University of Croatia, Croatia",45.1402282714844,16.4281349182129,1,1.0309278350515463
+50,Benemérita Universidad Autónoma de Puebla,Mexico,"Benemérita Universidad Autónoma de Puebla, Mexico",18.99435,-98.20518,1,1.0309278350515463
+51,Technische Universität/Dresden,Germany,"Technische Universität/Dresden, Germany",51.0280609130859,13.7266702651978,1,1.0309278350515463
+52,University of Alabama,United States,"University of Alabama, United States",33.2106285095215,-87.5402603149414,2,2.0618556701030926
+53,SMPK VOKASIONAL INDAHPURA,Malaysia,"SMPK VOKASIONAL INDAHPURA, Malaysia",1.63814,103.61767,1,1.0309278350515463
+54,University Alexandru Ioan Cuza,Romania,"University Alexandru Ioan Cuza, Romania",45.02431,25.85745,1,1.0309278350515463
+55,“Magna Graecia” University of Catanzaro,Italy,"“Magna Graecia” University of Catanzaro, Italy",38.84775,16.61177,1,1.0309278350515463
+56,Eastern Michigan University,United States,"Eastern Michigan University, United States",42.2528076171875,-83.6340713500977,1,1.0309278350515463
+57,Universidad Peruana Cayetano Heredia,Peru,"Universidad Peruana Cayetano Heredia, Peru",-12.08081,-77.05067,1,1.0309278350515463
+58,PSYCOPERU,Peru,"PSYCOPERU, Peru",-12.05798,-77.03713,1,1.0309278350515463
+59,Pontifical Catholic University of São Paulo,Brazil,"Pontifical Catholic University of São Paulo, Brazil",-23.5594444274902,-46.7238883972168,1,1.0309278350515463
+60,Alliant International University,United States,"Alliant International University, United States",36.7659797668457,-119.720008850098,2,2.0618556701030926
+61,University of California,United States,"University of California, United States",37.8051109313965,-122.267456054688,1,1.0309278350515463
+62,Royal Commission for Jubail and Yanbu,Saudi Arabia,"Royal Commission for Jubail and Yanbu, Saudi Arabia",27.07602,49.594970000000004,1,1.0309278350515463
+63,Aarhus University,Denmark,"Aarhus University, Denmark",56.1722030639648,10.1903324127197,1,1.0309278350515463
+64,National Cheng Kung University,Taiwan,"National Cheng Kung University, Taiwan",22.99632,120.21526,1,1.0309278350515463
+65,Monash University,Australia,"Monash University, Australia",-37.8768005371094,145.044021606445,1,1.0309278350515463
+66,Utrecht University,Netherlands,"Utrecht University, Netherlands",52.09168,5.12036,1,1.0309278350515463
+67,Akal University,India,"Akal University, India",-4.2979040145874,139.676071166992,1,1.0309278350515463
+68,Ahmedabad University,India,"Ahmedabad University, India",23.0389995574951,72.5559997558594,1,1.0309278350515463
+69,Technical University of Munich,Germany,"Technical University of Munich, Germany",48.1495475769043,11.5677652359009,1,1.0309278350515463
+70,Carleton University,Canada,"Carleton University, Canada",45.3862266540527,-75.6962432861328,1,1.0309278350515463
+71,São Francisco University,Brazil,"São Francisco University, Brazil",-10.3333330154419,-53.2000007629395,2,2.0618556701030926
+72,Kingston University London,United Kingdom,"Kingston University London, United Kingdom",51.4031867980957,-0.303342998027802,1,1.0309278350515463
+73,São Francisco University,Brazil,"São Francisco University, Brazil",-10.3333330154419,-53.2000007629395,2,2.0618556701030926
+74,Brown University,United States,"Brown University, United States",41.8281936645508,-71.39990234375,1,1.0309278350515463
+75,Sapienza University of Rome,Italy,"Sapienza University of Rome, Italy",41.9032135009766,12.5153961181641,1,1.0309278350515463
+76,University of São Paulo,Brazil,"University of São Paulo, Brazil",-23.5594444274902,-46.7238883972168,4,4.123711340206185
+77,University of Maryland,United States,"University of Maryland, United States",38.9861030578613,-76.9372863769531,1,1.0309278350515463
+78,University of Minnesota,United States,"University of Minnesota, United States",44.9975662231445,-93.1847381591797,1,1.0309278350515463
+79,University of Cincinnati,United States,"University of Cincinnati, United States",39.1319694519043,-84.5157775878906,1,1.0309278350515463
+80,Masaryk University,Czech Republic,"Masaryk University, Czech Republic",50.08781,14.42046,1,1.0309278350515463
+81,New York University,United States,"New York University, United States",40.7304573059082,-73.9985275268555,2,2.0618556701030926
+82,American University of Beirut,Lebanon,"American University of Beirut, Lebanon",33.90169,35.47816,1,1.0309278350515463
+83,University of Sydney,Australia,"University of Sydney, Australia",-33.866813659668,151.160934448242,1,1.0309278350515463
+84,University of São Paulo,Brazil,"University of São Paulo, Brazil",-23.5594444274902,-46.7238883972168,4,4.123711340206185
+85,DanKook University,South Corea,"DanKook University, South Corea",36.4382286071777,127.832870483398,1,1.0309278350515463
+86,Harvard University,United States,"Harvard University, United States",42.3742027282715,-71.1162719726562,1,1.0309278350515463
+87,Centro Escolar University,Philippines,"Centro Escolar University, Philippines",15.9474067687988,121.421669006348,1,1.0309278350515463
+88,Royal Holloway University,United Kingdom,"Royal Holloway University, United Kingdom",51.4248008728027,-0.566730976104736,1,1.0309278350515463
+89,Universidad Nacional Autónoma de México UNAM,Mexico,"Universidad Nacional Autónoma de México UNAM, Mexico",23.75574,-99.13413,1,1.0309278350515463
+90,University of Cologne,Germany,"University of Cologne, Germany",50.9280586242676,6.92860984802246,1,1.0309278350515463
+91,Vrije Universiteit Amsterdam,Netherlands,"Vrije Universiteit Amsterdam, Netherlands",52.3329772949219,4.86699390411377,1,1.0309278350515463
+92,"ISCTE-IUL, Portugal",Portugal,"ISCTE-IUL, Portugal, Portugal",38.70701,-9.13564,1,1.0309278350515463
+93,University of Tennessee,United States,"University of Tennessee, United States",35.952823638916,-83.9445419311523,1,1.0309278350515463
+94,University of São Paulo,Brazil,"University of São Paulo, Brazil",-23.5594444274902,-46.7238883972168,4,4.123711340206185
+95,Federal University of Pernambuco,Brazil,"Federal University of Pernambuco, Brazil",-8.08516979217529,-34.9146385192871,1,1.0309278350515463
+96,Harvard Medical School,United States,"Harvard Medical School, United States",42.336971282959,-71.1032409667969,1,1.0309278350515463
+97,University of São Paulo,Brazil,"University of São Paulo, Brazil",-23.5594444274902,-46.7238883972168,4,4.123711340206185
