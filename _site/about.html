@@ -2125,19 +2125,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
      All rows must end with a semi-colon.                      */
 
   /* Optional: embed custom fonts here with `@import`          */
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
   /* This must remain at the top of this file.                 */
 
 
 
   html {
     /*-- Main font sizes --*/
-    --title-size:      50px;
-    --body-size:       1.06rem;
+    --title-size:      60px;
+    --body-size:       1.09rem;
     --code-size:       14px;
     --aside-size:      12px;
     --fig-cap-size:    13px;
     /*-- Main font colors --*/
-    --title-color:     #000000;
+    --title-color:     #E80000; /*ffe70c*/ 
     --header-color:    #ff4655/*rgba(0, 0, 0, 0.8);*/
     --body-color:      rgba(0, 0, 0, 0.8);
     --aside-color:     rgba(0, 0, 0, 0.6);
@@ -2182,12 +2183,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --bkgd-color:       white; /*#0F2E3D;*/
   }
 
-  .distill-site-footer {
+  /*.distill-site-footer {
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
-  }
+  }*/
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
@@ -2217,7 +2218,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --text-color:       black; /*rgba(255, 255, 255, 0.8);*/
     --text-size:        18px;
     --hover-color:      #ff4655; /*white;*/
-    --bkgd-color:       white; /*#0F2E3D;*/
+    --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
   }
 
   .distill-site-footer {
@@ -2235,12 +2236,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-title {
     width: 100%;
     padding-top: 6rem;
-    background-image: url("../images/header.jpg");
+    background-image: url("../images/books.jpg");
   	background-position: 100% 100%;
   	background-repeat: no-repeat;
   	background-size: cover;
   	background-attachment: fixed;
     font-family: 'Verdana', Sans-Serif;
+    color: #E80000;
   }
 
   .headers {
@@ -2281,7 +2283,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .card-header {
-    font-size: 24px;
+    font-size: 14px;
     padding: 4px 4px;
     padding-bottom: 10px;
   }
@@ -2564,6 +2566,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
+<a href="https://slack.com/intl/pt-br/">
+<i class="fab fa-slack" aria-hidden="true"></i>
+</a>
 <a href="https://github.com/marwincarmo/measurement-study-group" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>

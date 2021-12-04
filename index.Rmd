@@ -1,5 +1,5 @@
 ---
-title: "Measuring Psychology"
+title: "MEASURING PSYCHOLOGY"
 site: distill::distill_website
 ---
 
@@ -16,18 +16,16 @@ source(here::here("R", "functions.R"))
 ```
 
 
-Add a description
+**Measuring Psychology** is a global community and study group of aspiring and current students, professors, and interested people that help each other. We all have an interest in measurement theory for psychology and psychometrics. Through *discussions*, *solidarity*, and *openness*, we are boosting psychological science by improving measurement.
 
 <div class="headers">
-<h1>Join us</h1>
+<h1>Join our discussion</h1>
 </div>
-
-Testing the cards function
 
 ```{r}
 # teste
 as_card(group_name = "Reading list",
-        event_name = "Descricao da planilha",
+        event_name = "Here you will find papers suggested by our community and you may add a suggestion yourself.",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1VUtka6tC1bZucqsJ-8pvOM78azqjYyrIS4Dt3tCtrdg/edit#gid=0'
         )
@@ -35,7 +33,7 @@ as_card(group_name = "Reading list",
 
 ```{r}
 as_card(group_name = "Sign up",
-        event_name = "Descricao do formulário",
+        event_name = "If you want to take part in our live sessions, follow this link to fill the interest form.",
         img_src = "images/google_forms.svg",
         link = 'https://forms.gle/LhhBVLEX5C9Ybnta8'
         )
