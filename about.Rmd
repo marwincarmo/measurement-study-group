@@ -1,7 +1,6 @@
 ---
-title: "About this site"
+title: "About Measuring Psychology"
 description: |
-  Some additional details about the website
 
 ---
 
@@ -9,3 +8,16 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+This group was first thought to be a small study group about measurement theory and psychometrics for psychology folks. The creators of "Measuring Psychology" were inspired by a reading list from Jessica Kay Flake and Eiko Fried called "Measurement Matters Resource List". You can have access to this list [here](https://docs.google.com/document/d/11jyoXtO0m2lUywpC04KjLvI5QcBUY4YtwEvw6cg2cMs/edit?usp=sharing). Hence, we thank you, Dr. Jessica and Dr. Eiko for doing this.
+
+With help from quantitative folks advertising on twitter, a lot of people showed interest in participating in the study group. This is great, since it shows how we are all interested in improving our area of research. Thus, not only we created a study group, but we also started a community of people interested in those topics. 
+
+We communicate with the community in our slack group and will have online meetings to do our study group. Everyone is welcome to join both of them, as long as they follow our code of conduct below.
+
+Code of conduct for Slack and Study group:
+
+1. Don't shame your peers! There are no stupid questions. We are here to learn together, so be kind.
+
+2. Any form of prejudice or discrimination will not be allowed. This will result in immediate exclusion from the group. The administrators care about a safe environment, anyone that is suffering from it in our community, feel free to reach out to the administrators (Rafael Bastos and Marwin Carmo).
+
+3. Be open to learning from others and teaching others.

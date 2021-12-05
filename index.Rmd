@@ -22,18 +22,17 @@ source(here::here("R", "functions.R"))
 <h1>Join our discussion</h1>
 </div>
 
-```{r}
-# teste
+```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "Here you will find papers suggested by our community and you may add a suggestion yourself.",
+        event_name = "A list of papers suggested by our community. You may add a suggestion yourself.",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1VUtka6tC1bZucqsJ-8pvOM78azqjYyrIS4Dt3tCtrdg/edit#gid=0'
         )
 ```
 
-```{r}
+```{r sign up form}
 as_card(group_name = "Sign up",
-        event_name = "If you want to take part in our live sessions, follow this link to fill the interest form.",
+        event_name = "If you want to join our live meetings, follow this link to fill the interest form.",
         img_src = "images/google_forms.svg",
         link = 'https://forms.gle/LhhBVLEX5C9Ybnta8'
         )
@@ -43,7 +42,15 @@ as_card(group_name = "Sign up",
 <h1>Community</h1>
 </div>
 
-```{r, layout="l-screen-inset"}
+As you can see on the map, we have a growing community from almost all parts of the world, with different backgrounds. For instance, we are: 
+
+  a. both from academia and industry;  
+  b. from undergraduate students to Ph.D.’s;  
+  c. from psychology, education, statistics, mathematics, and many more.
+  
+We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, read the “About” page to see our code of conduct.
+
+```{r map, layout="l-screen-inset"}
 library(leaflet)
 map_data <- readr::read_csv("assets/map_data.csv")
 # calculate center point for setting zoom
@@ -53,11 +60,11 @@ lat <- sum(bbox[c(2, 4)]) / 2
 
 map_data %>% 
         leaflet() %>%
-        setView(lon, lat, zoom =1) %>% 
+        setView(lon, lat, zoom =2) %>% 
         addTiles() %>% 
         addMarkers(lng = ~longitude, lat = ~latitude, 
                 popup = paste0(
-                '<b>Contry:</b> ',map_data$university, '<br>',
+                '<b>Affiliation:</b> ',map_data$university, '<br>',
                 '<b>Participants:</b> ', map_data$n, '<br>'
                 ),
                 clusterOptions = markerClusterOptions()
@@ -69,6 +76,8 @@ map_data %>%
 <h1>Meetings calendar</h1>
 </div>
 
+To be defined in January.
+
 ```{r}
 toastui::calendar()
 
@@ -79,12 +88,47 @@ toastui::calendar()
 <h1>Join our Slack channel</h1>
 </div>
 
-Link to the channel
+If you are interested in participating in this community, please join our slack group! You can send an email to rafavsbastos@gmail.com and marwinbr@gmail.com, and we will send you an invitation.
 
 <div class="headers">
 <h1>About us</h1>
 </div>
 
-```{r}
-plot(hist(mtcars$disp))
-```
+
+:::::::::::::: {.columns}
+::: {.column width="45%"}
+
+```{r }
+desc_rafael <- "Rafael Bastos is a Master's student in Psychology in the field of construction, validation, and standardization of instruments at São Francisco University (Brazil). Works mainly on the following subjects: psychometrics, statistics, and quantitative methods."
+
+profile_card(img_src = "images/rafael.jpg", name = "Rafael Bastos", title="Founder and Administrator", 
+             description = desc_rafael, 
+             email="mailto:rafavsbastos@gmail.com",
+             website="https://rafavsbastos.medium.com/",
+             twitter="https://twitter.com/rafavsbastos",
+             linkedin="https://www.linkedin.com/in/rafael-valdece-sousa-bastos/")
+
+``` 
+
+:::
+::: {.column width="10%" }
+\
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+::: {.column width="45%"}
+
+```{r }
+desc_marwin <- "Marwin Carmo is a Master's student in Psychiatry at University of São Paulo (Brazil). Works mainly on the following subjects: construction and validation of psychological instruments, mental health, and social psychology."
+
+profile_card(img_src = "images/marwin.jpg", name = "Marwin Carmo", title = "Founder and Administrator",
+             description = desc_marwin, 
+             email="mailto:marwin@usp.br",
+             website="marwincarmo.github.io",
+             twitter="https://twitter.com/marwincarmo",
+             linkedin="https://www.linkedin.com/in/marwin-carmo/")
+``` 
+
+:::
+::::::::::::::
+

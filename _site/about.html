@@ -87,29 +87,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Measuring Psychology: About this site</title>
+  <title>Measuring Psychology: About Measuring Psychology</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about the website"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Measuring Psychology: About this site"/>
+  <meta property="og:title" content="Measuring Psychology: About Measuring Psychology"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Measuring Psychology"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Measuring Psychology: About this site"/>
-  <meta property="twitter:description" content="Some additional details about the website"/>
+  <meta property="twitter:title" content="Measuring Psychology: About Measuring Psychology"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website\n"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Measuring Psychology"]},{"type":"NULL"}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2217,7 +2214,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --title-size:       18px;
     --text-color:       black; /*rgba(255, 255, 255, 0.8);*/
     --text-size:        18px;
-    --hover-color:      #ff4655; /*white;*/
+    --hover-color:      #d71525; /*white;*/
     --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
   }
 
@@ -2278,13 +2275,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   .card-group {
     color: #4682B4;
-    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto', Sans-Serif;
     font-size: 18px;
     padding: 4px 4px;
   }
 
   .card-header {
-    font-size: 14px;
+    font-size: 18px;
     padding: 4px 4px;
     padding-bottom: 10px;
     line-height: 1.1;
@@ -2319,11 +2316,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     }
 
   a {
-      text-decoration-line: none;
+    text-decoration-line: none;
+    text-decoration: none;
   }
 
   fa-row {
     padding-left: 0;
+    text-decoration: none;
   }
 
   ul.network-icon{
@@ -2350,7 +2349,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   }
 
   .network-icon a {
-      text-decoration: none!important;
+      text-decoration: none;
   }
 
   .fa-row-name {
@@ -2367,7 +2366,106 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   .mediumimg {
     height: 250px;
     width: 250px;
-  }</style>
+  }
+
+  /* Profile card */
+
+  .card-profile {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 300px;
+    height: 650px;
+    margin: auto;
+    text-align: center;
+
+  }
+
+  .title-profile {
+    font-family: 'Roboto', Sans-Serif;
+    color: grey;
+    font-size: 18px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  .text-profile {
+    font-size: 14px;
+    padding: 12px 12px;
+    padding-bottom: 0px;
+    line-height: 1.5;
+    text-align: left;
+      
+  }
+
+  .card-icon {
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: "black";
+      clip: rect(0,0,0,0);
+      border: none;
+      overflow: hidden;
+
+  }
+
+  .card-icon:hover{
+    color: #ff4655;
+    border: none;
+    transition: .2s;
+      
+  }
+  /*
+
+  .fa {
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: "black";
+      clip: rect(0,0,0,0);
+      border: none;
+      overflow: hidden;
+  }
+
+  .fas {
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: "black";
+      clip: rect(0,0,0,0);
+      border: none;
+      overflow: hidden;
+  }
+
+  .fab {
+      font-size: 30px;
+      padding: 10px;
+      text-decoration: none;
+      color: "black";
+      clip: rect(0,0,0,0);
+      border: none;
+      overflow: hidden;
+  }
+
+  .fa:hover {
+    color: #ff4655;
+    border: none;
+    transition: .2s;
+  }
+
+  .fas:hover {
+    color: #ff4655;
+    border: none;
+    transition: .2s;
+  }
+
+  .fab:hover {
+    color: #ff4655;
+    opacity: 0.7;
+    border: none;
+    transition: .2s;
+  }
+  */
+  .columns {display: flex; }
+  </style>
   <style type="text/css">
   /* base style */
 
@@ -2555,7 +2653,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"Some additional details about the website","authors":[]}
+{"title":"About Measuring Psychology","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2583,14 +2681,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this site</h1>
+<h1>About Measuring Psychology</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the website</p></p>
+
 </div>
 
 
 <div class="d-article">
+<p>This group was first thought to be a small study group about measurement theory and psychometrics for psychology folks. The creators of “Measuring Psychology” were inspired by a reading list from Jessica Kay Flake and Eiko Fried called “Measurement Matters Resource List”. You can have access to this list <a href="https://docs.google.com/document/d/11jyoXtO0m2lUywpC04KjLvI5QcBUY4YtwEvw6cg2cMs/edit?usp=sharing">here</a>. Hence, we thank you, Dr. Jessica and Dr. Eiko for doing this.</p>
+<p>With help from quantitative folks advertising on twitter, a lot of people showed interest in participating in the study group. This is great, since it shows how we are all interested in improving our area of research. Thus, not only we created a study group, but we also started a community of people interested in those topics.</p>
+<p>We communicate with the community in our slack group and will have online meetings to do our study group. Everyone is welcome to join both of them, as long as they follow our code of conduct below.</p>
+<p>Code of conduct for Slack and Study group:</p>
+<ol type="1">
+<li><p>Don’t shame your peers! There are no stupid questions. We are here to learn together, so be kind.</p></li>
+<li><p>Any form of prejudice or discrimination will not be allowed. This will result in immediate exclusion from the group. The administrators care about a safe environment, anyone that is suffering from it in our community, feel free to reach out to the administrators (Rafael Bastos and Marwin Carmo).</p></li>
+<li><p>Be open to learning from others and teaching others.</p></li>
+</ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

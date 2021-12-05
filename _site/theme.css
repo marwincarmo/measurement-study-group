@@ -101,7 +101,7 @@ body {
   --title-size:       18px;
   --text-color:       black; /*rgba(255, 255, 255, 0.8);*/
   --text-size:        18px;
-  --hover-color:      #ff4655; /*white;*/
+  --hover-color:      #d71525; /*white;*/
   --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
 }
 
@@ -162,13 +162,13 @@ d-title {
 
 .card-group {
   color: #4682B4;
-  font-family: 'Pacifico', cursive;
+  font-family: 'Roboto', Sans-Serif;
   font-size: 18px;
   padding: 4px 4px;
 }
 
 .card-header {
-  font-size: 14px;
+  font-size: 18px;
   padding: 4px 4px;
   padding-bottom: 10px;
   line-height: 1.1;
@@ -203,11 +203,13 @@ d-title {
   }
 
 a {
-    text-decoration-line: none;
+  text-decoration-line: none;
+  text-decoration: none;
 }
 
 fa-row {
   padding-left: 0;
+  text-decoration: none;
 }
 
 ul.network-icon{
@@ -234,7 +236,7 @@ ul.network-icon{
 }
 
 .network-icon a {
-    text-decoration: none!important;
+    text-decoration: none;
 }
 
 .fa-row-name {
@@ -252,3 +254,102 @@ ul.network-icon{
   height: 250px;
   width: 250px;
 }
+
+/* Profile card */
+
+.card-profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 300px;
+  height: 650px;
+  margin: auto;
+  text-align: center;
+
+}
+
+.title-profile {
+  font-family: 'Roboto', Sans-Serif;
+  color: grey;
+  font-size: 18px;
+  margin: 0px 0px 5px 0px;
+}
+
+.text-profile {
+  font-size: 14px;
+  padding: 12px 12px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+  text-align: left;
+    
+}
+
+.card-icon {
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: "black";
+    clip: rect(0,0,0,0);
+    border: none;
+    overflow: hidden;
+
+}
+
+.card-icon:hover{
+  color: #ff4655;
+  border: none;
+  transition: .2s;
+    
+}
+/*
+
+.fa {
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: "black";
+    clip: rect(0,0,0,0);
+    border: none;
+    overflow: hidden;
+}
+
+.fas {
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: "black";
+    clip: rect(0,0,0,0);
+    border: none;
+    overflow: hidden;
+}
+
+.fab {
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: "black";
+    clip: rect(0,0,0,0);
+    border: none;
+    overflow: hidden;
+}
+
+.fa:hover {
+  color: #ff4655;
+  border: none;
+  transition: .2s;
+}
+
+.fas:hover {
+  color: #ff4655;
+  border: none;
+  transition: .2s;
+}
+
+.fab:hover {
+  color: #ff4655;
+  opacity: 0.7;
+  border: none;
+  transition: .2s;
+}
+*/
+.columns {display: flex; }
+

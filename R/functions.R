@@ -49,3 +49,36 @@ create_proj_card <- function(img_src, url, title, text, text2){
     ))
     
 }
+# twitter_url, linkedin_url, scholar_url
+profile_card <- function(img_src, name, title, email, description, website, twitter, linkedin) {
+    tags$div(
+        class = "card-profile",
+        tags$img(src=img_src,
+                 style="width:100%"),
+        tags$h1(name),
+        p(title, class="title-profile"),
+        p(description, class="text-profile"),
+        a(target="_blank", 
+          href=email,
+          class="fas fa-envelope",
+          class="card-icon"),
+        a(target="_blank", 
+          href=website,
+          class="card-icon",
+          class=if (stringr::str_detect(website, "medium")) {
+              "fab fa-medium"
+          } else {
+              "fas fa-globe"
+          }
+          ),
+        a(target="_blank", 
+          href=twitter,
+          class="fa fa-twitter",
+          class="card-icon"),
+        a(target="_blank", 
+          href=linkedin,
+          class="fa fa-linkedin",
+          class="card-icon")
+           )
+
+}
