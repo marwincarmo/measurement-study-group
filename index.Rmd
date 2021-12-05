@@ -48,7 +48,7 @@ As you can see on the map, we have a growing community from almost all parts of 
   b. from undergraduate students to Ph.D.’s;  
   c. from psychology, education, statistics, mathematics, and many more.
   
-We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, read the “About” page to see our code of conduct.
+We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, read the [About](about.html) page to see our code of conduct.
 
 ```{r map, layout="l-screen-inset"}
 library(leaflet)
@@ -124,7 +124,7 @@ desc_marwin <- "Marwin Carmo is a Master's student in Psychiatry at University o
 profile_card(img_src = "images/marwin.jpg", name = "Marwin Carmo", title = "Founder and Administrator",
              description = desc_marwin, 
              email="mailto:marwin@usp.br",
-             website="marwincarmo.github.io",
+             website="https://marwincarmo.github.io/",
              twitter="https://twitter.com/marwincarmo",
              linkedin="https://www.linkedin.com/in/marwin-carmo/")
 ``` 
