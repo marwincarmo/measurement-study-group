@@ -105,10 +105,37 @@ body {
   --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
 }
 
+.distill-site-header .logo img {
+   max-height: 60px;
+   width: auto;
+   margin-top: 18px;
+}
+
+
 .distill-site-footer {
   font-size: 10px;
   margin: 0 0;
   padding: 0 0;
+}
+
+/* styling for icon-link buttons (see distilltools::icon_link()) */
+.icon-link {
+    background-color: transparent;
+    color: #D4006A;
+    border: 1px solid;
+    border-color: #D4006A;
+    padding: 5px .4rem 5px .4rem;
+    /*margin: 4px;*/
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    border-radius: 5px; /* Rounded edges */
+}
+
+.icon-link:hover {
+    background-color: #D4006A;
+    border-color: #D4006A;
+    color: white;
 }
 
 @media print {

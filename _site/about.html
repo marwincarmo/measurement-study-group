@@ -87,26 +87,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Measuring Psychology: About Measuring Psychology</title>
+  <title>: About our group</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Measuring Psychology: About Measuring Psychology"/>
+  <meta property="og:title" content=": About our group"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Measuring Psychology"/>
+  <meta property="og:site_name" content=""/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Measuring Psychology: About Measuring Psychology"/>
+  <meta property="twitter:title" content=": About our group"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About Measuring Psychology"]},{"type":"NULL"}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About our group"]},{"type":"NULL"}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2218,10 +2218,37 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
   }
 
+  .distill-site-header .logo img {
+     max-height: 60px;
+     width: auto;
+     margin-top: 18px;
+  }
+
+
   .distill-site-footer {
     font-size: 10px;
     margin: 0 0;
     padding: 0 0;
+  }
+
+  /* styling for icon-link buttons (see distilltools::icon_link()) */
+  .icon-link {
+      background-color: transparent;
+      color: #D4006A;
+      border: 1px solid;
+      border-color: #D4006A;
+      padding: 5px .4rem 5px .4rem;
+      /*margin: 4px;*/
+      margin-top: 4px;
+      margin-right: 8px;
+      margin-bottom: 4px;
+      border-radius: 5px; /* Rounded edges */
+  }
+
+  .icon-link:hover {
+      background-color: #D4006A;
+      border-color: #D4006A;
+      color: white;
   }
 
   @media print {
@@ -2653,7 +2680,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About Measuring Psychology","authors":[]}
+{"title":"About our group","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2661,13 +2688,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Measuring Psychology</a>
+<a class="logo" href="index.html">
+<img src="images/logo.png" alt="Logo"/>
+</a>
+<a href="index.html" class="title"></a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="https://slack.com/intl/pt-br/">
-<i class="fab fa-slack" aria-hidden="true"></i>
+<i class="fa fa-slack" aria-hidden="true"></i>
 </a>
 <a href="https://github.com/marwincarmo/measurement-study-group" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>
@@ -2681,7 +2711,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About Measuring Psychology</h1>
+<h1>About our group</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 

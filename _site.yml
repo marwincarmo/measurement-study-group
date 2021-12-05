@@ -1,17 +1,20 @@
 name: "measurement-study-group"
-title: "Measuring Psychology"
+title: ""
 theme: theme.css
 description: |
   Measurement Study Group
 output_dir: "_site"
 repository_url: https://github.com/marwincarmo/measurement-study-group
 navbar:
+  logo:
+    image: images/logo.png
+    href: index.html
   right:
     - text: "Home"
       href: index.html
     - text: "About"
       href: about.html
-    - icon: fab fa-slack
+    - icon: fa fa-slack
       href: https://slack.com/intl/pt-br/
   source_url: true
 output:
