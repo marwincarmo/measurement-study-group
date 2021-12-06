@@ -16,7 +16,7 @@
 
 html {
   /*-- Main font sizes --*/
-  --title-size:      80px;
+  --title-size:      80px !important;
   --body-size:       1.09rem;
   --code-size:       14px;
   --aside-size:      12px;
