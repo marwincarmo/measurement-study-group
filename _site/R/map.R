@@ -45,3 +45,25 @@ map_data %>%
     )
 
 readr::write_csv(map_data, "assets/map_data.csv")
+
+
+# Fixing addresses --------------------------------------------------------
+
+usf_addr <- tibble::tibble(university = c("São Francisco University","Uni7"),
+                           addr = c("Av. Carlos de Campos, 550 - Jardim Sao Jose, Bragança Paulista - SP, 12916-220",
+                                    "Av. Almirante Maximiniano da Fonseca, 1395 - Luciano Cavalcante, Fortaleza - CE")) %>% 
+    tidygeocoder::geocode(addr, method = "bing", lat = latitude , long = longitude)
+
+map_data_fixed <- map_data %>% 
+    dplyr::mutate(latitude = dplyr::case_when(
+        university == "Uni7" ~ dplyr::pull(dplyr::select(dplyr::filter(usf_addr, university == "Uni7"), latitude)),
+        university == "São Francisco University"  ~ dplyr::pull(dplyr::select(dplyr::filter(usf_addr, university == "São Francisco University"), latitude)),
+        TRUE ~ latitude
+    ),
+    longitude = dplyr::case_when(
+        university == "Uni7" ~ dplyr::pull(dplyr::select(dplyr::filter(usf_addr, university == "Uni7"), longitude)),
+        university == "São Francisco University"  ~ dplyr::pull(dplyr::select(dplyr::filter(usf_addr, university == "São Francisco University"), longitude)),
+        TRUE ~ longitude
+    ))
+
+readr::write_csv(map_data_fixed, "assets/map_data_fixed.csv")

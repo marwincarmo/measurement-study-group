@@ -58,6 +58,7 @@ profile_card <- function(img_src, name, title, email, description, website, twit
         tags$h1(name),
         p(title, class="title-profile"),
         p(description, class="text-profile"),
+        tags$div(
         a(target="_blank", 
           href=email,
           class="fas fa-envelope",
@@ -79,6 +80,6 @@ profile_card <- function(img_src, name, title, email, description, website, twit
           href=linkedin,
           class="fa fa-linkedin",
           class="card-icon")
-           )
+           ))
 
 }

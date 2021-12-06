@@ -84,8 +84,9 @@ body {
 .distill-site-nav {
   color: rgba(0, 0, 0, 0.7);
   background-color: #F5F5F5;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
+
 }
 
 .distill-site-nav a {
@@ -97,10 +98,17 @@ body {
   color: black;
 }
 
+nav.distill-site-nav.distill-site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 .distill-site-header {
   --title-size:       18px;
   --text-color:       black; /*rgba(255, 255, 255, 0.8);*/
-  --text-size:        18px;
+  --text-size:        22px;
   --hover-color:      #d71525; /*white;*/
   --bkgd-color:       #F5F5F5; /*#0F2E3D;*/
 }
@@ -108,9 +116,13 @@ body {
 .distill-site-header .logo img {
    max-height: 60px;
    width: auto;
-   margin-top: 18px;
+   margin-top: 6px;
 }
 
+/* remove title - logo suffices*/
+.distill-site-header .title {
+  display: none;
+}
 
 .distill-site-footer {
   font-size: 10px;

@@ -1,13 +1,14 @@
 name: "measurement-study-group"
-title: ""
+title: "Measuring Psychology"
 theme: theme.css
+google_analytics: "G-2M2XHCZLJ6"
 description: |
   Measurement Study Group
 output_dir: "_site"
 repository_url: https://github.com/marwincarmo/measurement-study-group
 navbar:
   logo:
-    image: images/logo.png
+    image: images/logo2.png
     href: index.html
   right:
     - text: "Home"
