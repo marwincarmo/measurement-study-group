@@ -115,7 +115,8 @@ profile_card(img_src = "images/rafael.jpg", name = "Rafael Bastos", title="Found
 ::: {.wrap width="50%"}
 
 ```{r }
-desc_marwin <- "Marwin Carmo is a Master's student in Psychiatry at University of São Paulo (Brazil). Works mainly on the following subjects: construction and validation of psychological instruments, mental health, and social psychology."
+desc_marwin <- "Marwin Carmo is a Master's student in Psychiatry at University of São Paulo (Brazil). Interested in:
+sleep medicine, psychometrics, quantitative methods, open science, and R programming."
 
 profile_card(img_src = "images/marwin.jpg", name = "Marwin Carmo", title = "Founder and Administrator",
              description = desc_marwin, 

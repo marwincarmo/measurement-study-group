@@ -16,7 +16,7 @@
 
 html {
   /*-- Main font sizes --*/
-  --title-size:      80px;
+  --title-size:      80px !important;
   --body-size:       1.09rem;
   --code-size:       14px;
   --aside-size:      12px;
@@ -76,6 +76,22 @@ d-appendix {
 
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
+
+.break,
+p,
+ul,
+ol,
+dl,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+    word-break: break-word;
+}
 
 body {
     background-color: #F5F5F5; 

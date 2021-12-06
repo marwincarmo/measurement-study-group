@@ -2129,7 +2129,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   html {
     /*-- Main font sizes --*/
-    --title-size:      80px;
+    --title-size:      80px !important;
     --body-size:       1.09rem;
     --code-size:       14px;
     --aside-size:      12px;
@@ -2189,6 +2189,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
+
+  .break,
+  p,
+  ul,
+  ol,
+  dl,
+  blockquote,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      word-wrap: break-word;
+      word-break: break-word;
+  }
 
   body {
       background-color: #F5F5F5; 
@@ -2728,9 +2744,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
-<a href="https://slack.com/intl/pt-br/">
-<i class="fa fa-slack" aria-hidden="true"></i>
-</a>
 <a href="https://github.com/marwincarmo/measurement-study-group" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
