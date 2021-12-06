@@ -319,6 +319,7 @@ ul.network-icon{
     border: none;
     overflow: hidden;
 
+
 }
 
 .card-icon:hover{
@@ -376,7 +377,18 @@ ul.network-icon{
   opacity: 0.7;
   border: none;
   transition: .2s;
+  
 }
 */
-.columns {display: flex; }
+.columns {
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    
+}
 
+
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+} 

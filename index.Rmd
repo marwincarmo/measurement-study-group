@@ -96,7 +96,8 @@ If you are interested in participating in this community, please join our slack 
 
 
 :::::::::::::: {.columns}
-::: {.column width="45%"}
+::: {.wrap width="50%"}
+
 
 ```{r }
 desc_rafael <- "Rafael Bastos is a Master's student in Psychology in the field of construction, validation, and standardization of instruments at São Francisco University (Brazil). Works mainly on the following subjects: psychometrics, statistics, and quantitative methods."
@@ -111,12 +112,7 @@ profile_card(img_src = "images/rafael.jpg", name = "Rafael Bastos", title="Found
 ``` 
 
 :::
-::: {.column width="10%" }
-\
-<!-- an empty Div (with a white space), serving as
-a column separator -->
-:::
-::: {.column width="45%"}
+::: {.wrap width="50%"}
 
 ```{r }
 desc_marwin <- "Marwin Carmo is a Master's student in Psychiatry at University of São Paulo (Brazil). Works mainly on the following subjects: construction and validation of psychological instruments, mental health, and social psychology."
