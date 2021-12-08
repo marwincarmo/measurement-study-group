@@ -32,7 +32,7 @@ as_card(group_name = "Reading list",
 
 ```{r sign up form}
 as_card(group_name = "Sign up",
-        event_name = "If you want to join our live meetings, follow this link to fill the interest form.",
+        event_name = "If you want to join our live meetings, follow this link to fill the registration form.",
         img_src = "images/google_forms.svg",
         link = 'https://forms.gle/LhhBVLEX5C9Ybnta8'
         )
@@ -48,7 +48,7 @@ As you can see on the map, we have a growing community from almost all parts of 
   b. from undergraduate students to Ph.D.’s;  
   c. from psychology, education, statistics, mathematics, and many more.
   
-We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, read the [About](about.html) page to see our code of conduct.
+We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, consider reading our [code of conduct](coc.html).
 
 ```{r map, layout="l-screen-inset"}
 library(leaflet)
@@ -89,9 +89,9 @@ toastui::calendar()
 </div>
 
 We are working on the final details of the group. It should be ready for everyone to join before Christmas.
-If you are interested in participating in this community, please fill the registration form. We'll send an invitation to the group for every registered participant.
+If you are interested in participating in this community, please fill the registration form. We'll send an invitation to the Slack workspace for every registered participant.
 
-In the meanwhile, follow us on twitter to the latest updates (links below).
+In the meanwhile, follow us on twitter to get the latest updates (links below).
 
 <div class="headers">
 <h1>About us</h1>
