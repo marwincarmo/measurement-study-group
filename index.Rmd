@@ -88,7 +88,10 @@ toastui::calendar()
 <h1>Join our Slack channel</h1>
 </div>
 
-If you are interested in participating in this community, please join our slack group! You can send an email to rafavsbastos@gmail.com and marwinbr@gmail.com, and we will send you an invitation.
+We are working on the final details of the group. It should be ready for everyone to join before Christmas.
+If you are interested in participating in this community, please fill the registration form. We'll send an invitation to the group for every registered participant.
+
+In the meanwhile, follow us on twitter to the latest updates (links below).
 
 <div class="headers">
 <h1>About us</h1>
