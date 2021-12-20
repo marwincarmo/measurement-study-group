@@ -2,13 +2,14 @@ library(googledrive)
 library(dplyr)
 library(hms)
 library(lubridate)
+library(ggplot2)
 
 drive_find(n_max = 30)
 
-drive_download("inscritos", type = "csv")
+drive_download("inscritos", type = "csv", overwrite = TRUE)
 raw_data <- readr::read_csv('inscritos.csv') %>% 
     janitor::clean_names()
-glimpse(data)
+glimpse(raw_data)
 
 # Selecting columns with useful info for analysis
 data <- raw_data %>% 
@@ -27,7 +28,8 @@ max_block <- max(unlist(lapply(strsplit(as.character(data$hour),','), length)))
 # we'll use this function to convert the chosen time to UTC+0 timezone
 to_utc <- function(time, timezone) {
     
-    original <- strptime(time, format = "%I%p",tz="UTC")
+    # subtract 3600 seconds to transform the end time into start time (subtract 1 hour)
+    original <- strptime(time, format = "%I%p",tz="UTC") - 3600
     
     offset <- stringr::str_extract(timezone, "\\d{2}:\\d{2}")
     
@@ -40,7 +42,7 @@ to_utc <- function(time, timezone) {
     
 }
 
-data %>% 
+clean_data <- data %>% 
     # first lets work with the time data. we need to unify all options in a unique column
     tidyr::separate(hour, into = paste0("time_", 1:max_block), sep = ",") %>% 
     tidyr::pivot_longer(dplyr::starts_with('time_'), names_to = "time_label", values_to = "time_value") %>% 
@@ -51,17 +53,20 @@ data %>%
     tidyr::separate(day, into = paste0("day_", 1:5), sep = ",") %>% 
     tidyr::pivot_longer(dplyr::starts_with('day_'), names_to = "day_label", values_to = "day_value") %>% 
     dplyr::mutate(day_value = stringr::str_squish(day_value)) %>% 
-    dplyr::mutate(utc_time = parse_hm(to_utc(time_value, timezone))) %>% 
-    dplyr::mutate(start_time_br = as.POSIXct(utc_time, tz = "America/Sao_Paulo", usetz = TRUE))
-
-data %>% 
-    pull(timezone)
+    dplyr::mutate(utc_start_time = parse_hm(to_utc(time_value, timezone))) %>% 
+    dplyr::mutate(start_time_br = parse_hm(format(lubridate::with_tz(utc_start_time, tz = "America/Sao_Paulo"), "%H:%M")))
 
 
-tz(Sys.time())
+# time
+clean_data %>% 
+    with_groups(c(id, start_time_br), slice_head) %>% 
+    filter(!is.na(start_time_br)) %>% 
+    count(start_time_br) %>% 
+    arrange(desc(n))
 
-
-format(to_utc("12PM", "(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"), "%H:%M")
-
-
-
+# date
+clean_data %>% 
+    with_groups(c(id, day_value), slice_head) %>% 
+    filter(!is.na(day_value)) %>% 
+    count(day_value) %>% 
+    arrange(desc(n))
