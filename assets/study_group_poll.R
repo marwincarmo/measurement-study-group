@@ -3,6 +3,7 @@ library(dplyr)
 library(hms)
 library(lubridate)
 library(ggplot2)
+library(scales)
 
 drive_find(n_max = 30)
 
@@ -70,3 +71,68 @@ clean_data %>%
     filter(!is.na(day_value)) %>% 
     count(day_value) %>% 
     arrange(desc(n))
+
+# general
+clean_data %>% 
+    with_groups(c(id, time_value), slice_head) %>% 
+    filter(!is.na(time_value)) %>% 
+    count(time_value) %>% 
+    arrange(desc(n))
+
+# Visualizing the results -------------------------------------------------
+
+my_pretty_theme <- theme_minimal(base_family = "Roboto Condensed", base_size = 14) +
+    theme(panel.grid.minor = element_blank(),
+          # Bold, bigger title
+          plot.title = element_text(face = "bold", size = rel(1.7)),
+          # Plain, slightly bigger subtitle that is grey
+          plot.subtitle = element_text(face = "plain", size = rel(1.3), color = "grey70"),
+          # Italic, smaller, grey caption that is left-aligned
+          plot.caption = element_text(face = "italic", size = rel(0.7), 
+                                      color = "grey70", hjust = 0),
+          legend.position = c("top"),
+          legend.text = element_text(size=12),
+          # Bold legend titles
+          legend.title = element_text(face = "bold"),
+          # Bold, slightly larger facet titles that are left-aligned for the sake of repetition
+          strip.text = element_text(face = "bold", size = rel(1.1), hjust = 0),
+          # Bold axis titles
+          axis.title = element_text(face = "bold"),
+          # Add some space above the x-axis title and make it left-aligned
+          axis.title.x = element_text(margin = margin(t = 10), hjust = 0),
+          axis.text.x = element_text(color = "grey70"),
+          # Add some space to the right of the y-axis title and make it top-aligned
+          axis.title.y = element_text(margin = margin(r = 10), hjust = 1),
+          axis.text.y = element_text(color = "grey70"),
+          # Add a light grey background to the facet titles, with no borders
+          strip.background = element_rect(fill = "grey90", color = NA))
+
+# time
+start_time_plot <- clean_data %>% 
+    with_groups(c(id, utc_start_time), slice_head) %>% 
+    filter(!is.na(utc_start_time)) %>% 
+    count(utc_start_time) %>% 
+    ggplot(aes(x = utc_start_time, y = n)) +
+    geom_col(fill="#F27256") +
+    scale_x_time(breaks = as_hms(c('00:00:00',
+                                   '04:00:00',
+                                   '08:00:00',
+                                   '12:00:00',
+                                   '18:00:00',
+                                   '22:00:00')),
+                 labels = label_time(format = '%H:%M')) +
+    labs(x = "Start time (UTC +0)", y = "Count") +
+    my_pretty_theme
+
+# day
+week_day_plot <- clean_data %>% 
+    with_groups(c(id, day_value), slice_head) %>% 
+    filter(!is.na(day_value)) %>% 
+    count(day_value) %>% 
+    dplyr::mutate(day_value = factor(day_value, levels = c("Monday", "Tuesday",
+                                                           "Wednesday", "Thursday",
+                                                           "Friday"))) %>% 
+    ggplot(aes(x = day_value, y = n)) +
+    geom_col(color = "black", fill = "white") +
+    labs(x = "Week Day", y = "Count") +
+    my_pretty_theme
