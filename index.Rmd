@@ -24,7 +24,7 @@ source(here::here("R", "functions.R"))
 
 ```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "A list of papers suggested by our community.",
+        event_name = "A list of papers suggested by our community.\n",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1TePQGZySKnxl4N48EBgCYNvXzML98W3DvcudhRJ3AvY/edit?usp=sharing'
         )
