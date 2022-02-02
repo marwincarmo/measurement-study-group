@@ -24,7 +24,7 @@ source(here::here("R", "functions.R"))
 
 ```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "A list of papers suggested by our community.\n",
+        event_name = "A list of papers suggested by our community.\\n",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1TePQGZySKnxl4N48EBgCYNvXzML98W3DvcudhRJ3AvY/edit?usp=sharing'
         )
@@ -34,7 +34,7 @@ as_card(group_name = "Reading list",
 as_card(group_name = "Sign up",
         event_name = "If you want to join our live meetings, follow this link to fill the registration form.",
         img_src = "images/google_forms.svg",
-        link = 'https://forms.gle/LhhBVLEX5C9Ybnta8'
+        link = 'https://forms.gle/NVkAWxrzNqnNqsp17'
         )
 ```
 
