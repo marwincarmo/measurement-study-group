@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```{r, warning=FALSE, echo=FALSE}
 source(here::here("R", "functions.R"))
+source(here::here("assets", "calendar.R"))
 ```
 
 
@@ -24,7 +25,7 @@ source(here::here("R", "functions.R"))
 
 ```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "A list of papers suggested by our community.\\n",
+        event_name = "A list of papers suggested by our community.",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1TePQGZySKnxl4N48EBgCYNvXzML98W3DvcudhRJ3AvY/edit?usp=sharing'
         )
@@ -78,7 +79,10 @@ map_data %>%
 
 
 ```{r}
-toastui::calendar()
+library(toastui)
+#library(htmltools)
+calendar(useDetailPopup = TRUE) %>%
+  cal_schedules(mp_calendar)
 
 ```
 
