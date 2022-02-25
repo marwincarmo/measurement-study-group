@@ -25,7 +25,7 @@ source(here::here("assets", "calendar.R"))
 
 ```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "A list of papers suggested by our community.",
+        event_name = "Want to lead a session discussion? Just fill your name and contact info on the corresponding cell. Don't forget to register at the form below.",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1TePQGZySKnxl4N48EBgCYNvXzML98W3DvcudhRJ3AvY/edit?usp=sharing'
         )
@@ -43,7 +43,7 @@ as_card(group_name = "Sign up",
 <h1>Community</h1>
 </div>
 
-As you can see on the map, we have a growing community from almost all parts of the world, with different backgrounds. For instance, we are: 
+We have a growing community from almost all parts of the world, with different backgrounds. For instance, we are: 
 
   a. both from academia and industry;  
   b. from undergraduate students to Ph.D.’s;  
@@ -77,15 +77,30 @@ map_data %>%
 <h1>Meetings calendar</h1>
 </div>
 
-
-```{r}
+```{r calendar}
 library(toastui)
 #library(htmltools)
-calendar(useDetailPopup = TRUE) %>%
+calendar(view = "month", 
+         useDetailPopup = TRUE,
+         navigation = TRUE,
+         defaultDate = Sys.Date(),
+         useNavigation = TRUE,
+         startDayOfWeek  = 1, 
+        narrowWeekend = TRUE) %>%
   cal_schedules(mp_calendar)
 
 ```
 
+Our meetings are recorded and the videos are shared on our Slack channel afterwards.
+
+```{r}
+calendar(cal_demo_data(), navigation = TRUE, defaultDate = Sys.Date()) %>%
+  cal_month_options(
+    startDayOfWeek  = 1, 
+    narrowWeekend = TRUE
+  ) %>% 
+  cal_props(cal_demo_props())
+```
 
 <div class="headers">
 <h1>Join our Slack channel</h1>
