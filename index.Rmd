@@ -27,7 +27,7 @@ source(here::here("assets", "calendar.R"))
 as_card(group_name = "Reading list",
         event_name = "Want to lead a session discussion? Just fill your name and contact info on the corresponding cell. Don't forget to register at the form below.",
         img_src = "images/google_sheets.svg",
-        link = 'https://docs.google.com/spreadsheets/d/1TePQGZySKnxl4N48EBgCYNvXzML98W3DvcudhRJ3AvY/edit?usp=sharing'
+        link = 'https://docs.google.com/spreadsheets/d/1SOlgVUkUCKVM9kD9AvtMvqsG6lbsh0Nqj9Kom5eESXw/edit#gid=0'
         )
 ```
 
@@ -93,14 +93,6 @@ calendar(view = "month",
 
 Our meetings are recorded and the videos are shared on our Slack channel afterwards.
 
-```{r}
-calendar(cal_demo_data(), navigation = TRUE, defaultDate = Sys.Date()) %>%
-  cal_month_options(
-    startDayOfWeek  = 1, 
-    narrowWeekend = TRUE
-  ) %>% 
-  cal_props(cal_demo_props())
-```
 
 <div class="headers">
 <h1>Join our Slack channel</h1>
