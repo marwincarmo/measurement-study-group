@@ -5,11 +5,11 @@ titles <- c("Measurement in the Human Sciences w/ Dr. Derek Briggs", "Measuring 
             "Measuring Psychology #6 - Measurement: The theory of numerical assignments",
             "Measuring Psychology #7 - Psychological measurement between physics and statistics",
             "Measuring Psychology #8 - The ongoing dialog between empirical science and measurement theory",
-            "Measuring Psychology #9 - Representation in measurement: Talk w/ Dr. Elina Vessonen",
+            "Measuring Psychology #9 - Dr. Elina Vessonen: Representation in measurement",
             "Measuring Psychology #10 -  Measurement Theory, Psychology and the Revolution That Cannot Happen",
-            "Measuring Psychology #11 - Scale imposition as quantitative alchemy: Studies on the transitivity of neuroticism ratings",
+            "Measuring Psychology #11 - Dr. Stefanie Morris: Scale imposition as quantitative alchemy: Studies on the transitivity of neuroticism ratings",
             "Measuring Psychology #12 - Measurement Without Theory",
-            "Measuring Psychology #13 - Simultaneous conjoint measurement: A new type of fundamental measurement")
+            "Measuring Psychology #13 - Dr. Derek Briggs pt. 2")
 
 start_time <- c(format(Sys.Date(), "%Y-02-25 13:00:00"), format(Sys.Date(), "%Y-03-11 13:00:00"),
                 format(Sys.Date(), "%Y-03-25 13:00:00"), format(Sys.Date(), "%Y-04-08 13:00:00"),
