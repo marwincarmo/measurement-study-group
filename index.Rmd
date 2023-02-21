@@ -19,7 +19,7 @@ source(here::here("assets", "calendar.R"))
 
 **Measuring Psychology** is a global community with 200+ registered members interested in discussions, collaborations, and networking in the field of measurement in the human sciences. We all have an interest in measurement theory for psychology and psychometrics. Our community and study group comprises aspiring and current students, professors, and interested people who help each other. We are boosting psychological science by improving measurement through *discussions*, *solidarity*, and *openness*.
 
-This community has become a hub for academics and researchers. It has helped them learn in group studies and discussions with established researchers, such as Dr. Derek Briggs, Dr. Laura Bringmann, Dr. Markus Eronen, Dr. Elina Vessonen, Dr. Stephanie Morris, Dr. James Grice, and Dr. Vithor Franco.
+This community has become a hub for academics and researchers. It has helped them learn in group studies and discussions with established researchers, such as Dr. Derek Briggs, Dr. Laura Bringmann, Dr. Markus Eronen, Dr. Elina Vessonen, Dr. Stefanie Morris, Dr. James Grice, and Dr. Vithor Franco.
 
 <div class="headers">
 <h1>Join our discussion</h1>
@@ -61,7 +61,8 @@ old_map <- readr::read_csv("assets/map_data_fixed.csv")
 new_map <- readr::read_csv("assets/map_data_2023.csv") |> # From participants_database.R
   dplyr::rename(c(university = affilliation, 
                   country = country_of_residence))
-map_data <- dplyr::bind_rows(old_map, new_map)
+map_data <- dplyr::bind_rows(old_map, new_map) |> 
+  dplyr::with_groups(c(university:longitude), dplyr::mutate, n = dplyr::n())
 # calculate center point for setting zoom
 bbox <- ggmap::make_bbox(map_data$longitude, map_data$latitude)
 lon <- sum(bbox[c(1, 3)]) / 2
