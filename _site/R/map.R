@@ -38,7 +38,7 @@ map_data %>%
     addTiles() %>% 
     addMarkers(lng = ~longitude, lat = ~latitude, 
         popup = paste0(
-            '<b>Contry:</b> ',map_data$university, '<br>',
+            '<b>Country:</b> ',map_data$university, '<br>',
             '<b>Participants:</b> ', map_data$n, '<br>'
         ),
         clusterOptions = markerClusterOptions()
@@ -67,3 +67,14 @@ map_data_fixed <- map_data %>%
     ))
 
 readr::write_csv(map_data_fixed, "assets/map_data_fixed.csv")
+
+
+# New members -------------------------------------------------------------
+
+old_map <- readr::read_csv("assets/map_data_fixed.csv")
+new_map <- readr::read_csv("assets/map_data_2023.csv") |> # From participants_database.R
+  dplyr::rename(c(university = affilliation, 
+                  country = country_of_residence))
+  
+dplyr::bind_rows(old_map, new_map)
+  

@@ -19,6 +19,8 @@ navbar:
       href: coc.html
     - icon: fab fa-twitter
       href: https://twitter.com/measuringpsych
+    - icon: fas fa-envelope
+      href: mailto:measuringpsych@gmail.com
   source_url: true
 output:
   distill::distill_article:

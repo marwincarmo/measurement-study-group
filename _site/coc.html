@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,9 +74,9 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
 code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
@@ -784,6 +785,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1025,10 +1027,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1860,9 +1858,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1874,6 +1884,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1973,6 +2008,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1995,7 +2032,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2680,7 +2717,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2739,6 +2776,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="https://twitter.com/measuringpsych">
 <i class="fab fa-twitter" aria-hidden="true"></i>
 </a>
+<a href="mailto:measuringpsych@gmail.com">
+<i class="fas fa-envelope" aria-hidden="true"></i>
+</a>
 <a href="https://github.com/marwincarmo/measurement-study-group" aria-label="Link to source">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
@@ -2760,8 +2800,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="our-standards">Our Standards</h2>
-<p>The Measuring Psychology community and study group is dedicated to
-providing a positive experience for everyone, regardless of:</p>
+<p>The Measuring Psychology community and study group is dedicated to providing a positive experience for everyone, regardless of:</p>
 <ul>
 <li>Age</li>
 <li>body size</li>
@@ -2788,144 +2827,64 @@ providing a positive experience for everyone, regardless of:</p>
 <li>tribe</li>
 <li>veteran status</li>
 </ul>
-<h2 id="community-guidelines-for-slack-and-study-group">Community
-Guidelines for Slack and Study group</h2>
+<h2 id="community-guidelines-for-slack-and-study-group">Community Guidelines for Slack and Study group</h2>
 <ol type="1">
-<li><p>Be empathetic, friendly, and respectiful. Don’t shame your peers!
-There are no stupid questions. We are here to learn together, so be
-kind.</p></li>
-<li><p>Any form of prejudice or discrimination will not be allowed. This
-will result in immediate exclusion from the group. The administrators
-care about a safe environment, anyone that is suffering from it in our
-community, feel free to reach out to the administrators (Rafael Bastos
-and Marwin Carmo).</p></li>
+<li><p>Be empathetic, friendly, and respectiful. Don’t shame your peers! There are no stupid questions. We are here to learn together, so be kind.</p></li>
+<li><p>Any form of prejudice or discrimination will not be allowed. This will result in immediate exclusion from the group. The administrators care about a safe environment, anyone that is suffering from it in our community, feel free to reach out to the administrators (Rafael Bastos and Marwin Carmo).</p></li>
 <li><p>Be open to learning from others and teaching others.</p></li>
 </ol>
 <h2 id="inappropriate-behavior">Inappropriate Behavior</h2>
-<p>Community members asked to stop any inappropriate behavior are
-expected to comply immediately.</p>
-<p>We want all participants in the Measuring Psychology community to
-have the best possible experience they can. In order to be clear what
-that means, we’ve provided a list of examples of behaviors that are
-inappropriate for Measuring Psychology community spaces:</p>
+<p>Community members asked to stop any inappropriate behavior are expected to comply immediately.</p>
+<p>We want all participants in the Measuring Psychology community to have the best possible experience they can. In order to be clear what that means, we’ve provided a list of examples of behaviors that are inappropriate for Measuring Psychology community spaces:</p>
 <ol type="1">
 <li>Deliberate intimidation, stalking, or following.</li>
-<li>Sustained disruption of online discussion, talks, or other events.
-Sustained disruption of events, online discussions, or meetings,
-including talks and presentations, will not be tolerated. This includes
-‘Talking over’ or ‘heckling’ event speakers or influencing crowd actions
-that cause hostility in event sessions. Sustained disruption also
-includes drinking alcohol to excess or using recreational drugs to
-excess, or pushing others to do so.</li>
-<li>Harassment of people who don’t drink alcohol or other legal
-substances. We do not tolerate derogatory comments about those who
-abstain from alcohol or other legal substances. We do not tolerate
-pushing people to drink, talking about their abstinence or preferences
-to others, or pressuring them to drink - physically or through
-jeering.</li>
-<li>Sexist, racist, homophobic, transphobic, ableist language or
-otherwise exclusionary language. This includes deliberately referring to
-someone by a gender that they do not identify with, and/or questioning
-the legitimacy of an individual’s gender identity. If you’re unsure if a
-word is derogatory, don’t use it. This also includes repeated subtle
-and/or indirect discrimination.</li>
-<li>Unwelcome sexual attention or behavior that contributes to a
-sexualized environment. This includes sexualized comments, jokes or
-imagery in interactions, communications or presentation materials, as
-well as inappropriate touching, groping, or sexual advances. Sponsors
-should not use sexualized images, activities, or other material. Meetup
-organizing staff and other volunteer organizers should not use
-sexualized clothing/uniforms/costumes, or otherwise create a sexualized
-environment.</li>
-<li>Violence or threats of violence. Violence and threats of violence
-are not acceptable - online or offline. This includes incitement of
-violence toward any individual, including encouraging a person to commit
-self-harm. This also includes posting or threatening to post other
-people’s personally identifying information (“doxxing”) online.</li>
-<li>Influencing or encouraging inappropriate behavior. If you influence
-or encourage another person to violate the Code of Conduct, you may face
-the same consequences as if you had violated the Code of Conduct.</li>
+<li>Sustained disruption of online discussion, talks, or other events. Sustained disruption of events, online discussions, or meetings, including talks and presentations, will not be tolerated. This includes ‘Talking over’ or ‘heckling’ event speakers or influencing crowd actions that cause hostility in event sessions. Sustained disruption also includes drinking alcohol to excess or using recreational drugs to excess, or pushing others to do so.</li>
+<li>Harassment of people who don’t drink alcohol or other legal substances. We do not tolerate derogatory comments about those who abstain from alcohol or other legal substances. We do not tolerate pushing people to drink, talking about their abstinence or preferences to others, or pressuring them to drink - physically or through jeering.</li>
+<li>Sexist, racist, homophobic, transphobic, ableist language or otherwise exclusionary language. This includes deliberately referring to someone by a gender that they do not identify with, and/or questioning the legitimacy of an individual’s gender identity. If you’re unsure if a word is derogatory, don’t use it. This also includes repeated subtle and/or indirect discrimination.</li>
+<li>Unwelcome sexual attention or behavior that contributes to a sexualized environment. This includes sexualized comments, jokes or imagery in interactions, communications or presentation materials, as well as inappropriate touching, groping, or sexual advances. Sponsors should not use sexualized images, activities, or other material. Meetup organizing staff and other volunteer organizers should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</li>
+<li>Violence or threats of violence. Violence and threats of violence are not acceptable - online or offline. This includes incitement of violence toward any individual, including encouraging a person to commit self-harm. This also includes posting or threatening to post other people’s personally identifying information (“doxxing”) online.</li>
+<li>Influencing or encouraging inappropriate behavior. If you influence or encourage another person to violate the Code of Conduct, you may face the same consequences as if you had violated the Code of Conduct.</li>
 </ol>
-<h2 id="procedure-for-handling-incidents">Procedure for Handling
-Incidents</h2>
+<h2 id="procedure-for-handling-incidents">Procedure for Handling Incidents</h2>
 <h3 id="reporting-to-administrators">Reporting to administrators</h3>
-<p>If you believe someone has violated our Code of Conduct, we encourage
-you to report it. If you are unsure whether the incident is a violation,
-or whether the space where it happened is covered by this Code of
-Conduct, we encourage you to still report it. We are fine with receiving
-reports where we decide to take no action for the sake of creating a
-safer community.</p>
-<p>You can make a report by sending a direct message or emailing Rafael
-Bastos (<a href="mailto:rafavsbastos@gmail.com"
-class="email">rafavsbastos@gmail.com</a>) or Marwin Carmo (<a
-href="mailto:marwinbr@gmail.com"
-class="email">marwinbr@gmail.com</a>).</p>
+<p>If you believe someone has violated our Code of Conduct, we encourage you to report it. If you are unsure whether the incident is a violation, or whether the space where it happened is covered by this Code of Conduct, we encourage you to still report it. We are fine with receiving reports where we decide to take no action for the sake of creating a safer community.</p>
+<p>You can make a report by sending a direct message or emailing Rafael Bastos (<a href="mailto:rafavsbastos@gmail.com" class="email">rafavsbastos@gmail.com</a>) or Marwin Carmo (<a href="mailto:marwinbr@gmail.com" class="email">marwinbr@gmail.com</a>).</p>
 <ol type="a">
 <li>Some guidelines to report data:</li>
 </ol>
-<p>If you make a report via email or direct message, we hope you can
-provide us with some information that will help us identify the reported
-person. If you don’t remember all the details, we still encourage you to
-make a report. We encourage you to include the following information in
-your report:</p>
+<p>If you make a report via email or direct message, we hope you can provide us with some information that will help us identify the reported person. If you don’t remember all the details, we still encourage you to make a report. We encourage you to include the following information in your report:</p>
 <ul>
-<li>Your contact info (so we can get in touch with you if we need to
-follow up)</li>
+<li>Your contact info (so we can get in touch with you if we need to follow up)</li>
 <li>Date of the incident</li>
 <li>Whether the incident is ongoing</li>
-<li>Which online community and which part of the online community space
-it occurred in</li>
+<li>Which online community and which part of the online community space it occurred in</li>
 <li>Description of the incident</li>
-<li>Identifying information of the reported person such as name, online
-username, handle, email address.</li>
+<li>Identifying information of the reported person such as name, online username, handle, email address.</li>
 <li>Any logs or screenshots of the conversation or behavior.</li>
 <li>Additional circumstances surrounding the incident</li>
-<li>Other people involved in or (if applicable) witnesses to the
-incident and their contact information or description.</li>
+<li>Other people involved in or (if applicable) witnesses to the incident and their contact information or description.</li>
 </ul>
 <ol start="2" type="a">
 <li>Confidentiality:</li>
 </ol>
-<p>All reports will be kept confidential. When the committee members
-discuss incidents with people who are reported, we will anonymize
-details as much as we can to protect reporter privacy.</p>
-<p>However, some incidents happen in one-on-one interactions, and even
-if the details are anonymized, the reported person may be able to guess
-who made the report. If you have concerns about retaliation or your
-personal safety, please note those in your report. We still encourage
-you to report, so that we can support you while keeping our community
-members safe. In some cases, we can compile several anonymized reports
-into a pattern of behavior, and take action on that pattern.</p>
-<p>In some cases we may determine that a public statement will need to
-be made. If that’s the case, the identities of all people impacted by
-the behavior and the people who reported that behavior will remain
-confidential, unless those individuals instruct us otherwise.</p>
-<p>The committee provides transparency reports about the incidents that
-occurred. Anonymized information from the incident you report may be
-included in transparency reports.</p>
+<p>All reports will be kept confidential. When the committee members discuss incidents with people who are reported, we will anonymize details as much as we can to protect reporter privacy.</p>
+<p>However, some incidents happen in one-on-one interactions, and even if the details are anonymized, the reported person may be able to guess who made the report. If you have concerns about retaliation or your personal safety, please note those in your report. We still encourage you to report, so that we can support you while keeping our community members safe. In some cases, we can compile several anonymized reports into a pattern of behavior, and take action on that pattern.</p>
+<p>In some cases we may determine that a public statement will need to be made. If that’s the case, the identities of all people impacted by the behavior and the people who reported that behavior will remain confidential, unless those individuals instruct us otherwise.</p>
+<p>The committee provides transparency reports about the incidents that occurred. Anonymized information from the incident you report may be included in transparency reports.</p>
 <ol start="3" type="a">
 <li>Conflicts of Interest:</li>
 </ol>
-<p>If a committee member has a conflict of interest for a report, they
-will recuse themselves from the discussion and handling of the incident.
-The incident documentation will not be available to them, and they will
-excuse themselves from any conversations involving handling the
-incident.</p>
+<p>If a committee member has a conflict of interest for a report, they will recuse themselves from the discussion and handling of the incident. The incident documentation will not be available to them, and they will excuse themselves from any conversations involving handling the incident.</p>
 <ol start="4" type="a">
 <li>Following Up With Reporters:</li>
 </ol>
-<p>After the incident report, the committee will follow up with the
-person who made the report. The follow up may include:</p>
+<p>After the incident report, the committee will follow up with the person who made the report. The follow up may include:</p>
 <ul>
-<li>An acknowledgment that the administrators discussed the
-situation.</li>
-<li>Whether or not the report was determined to be a violation of the
-Code of Conduct.</li>
-<li>What actions (if any) were taken to correct the reported
-behavior</li>
+<li>An acknowledgment that the administrators discussed the situation.</li>
+<li>Whether or not the report was determined to be a violation of the Code of Conduct.</li>
+<li>What actions (if any) were taken to correct the reported behavior</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

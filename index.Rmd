@@ -17,7 +17,9 @@ source(here::here("assets", "calendar.R"))
 ```
 
 
-**Measuring Psychology** is a global community and study group of aspiring and current students, professors, and interested people that help each other. We all have an interest in measurement theory for psychology and psychometrics. Through *discussions*, *solidarity*, and *openness*, we are boosting psychological science by improving measurement.
+**Measuring Psychology** is a global community with 200+ registered members interested in discussions, collaborations, and networking in the field of measurement in the human sciences. We all have an interest in measurement theory for psychology and psychometrics. Our community and study group comprises aspiring and current students, professors, and interested people who help each other. We are boosting psychological science by improving measurement through *discussions*, *solidarity*, and *openness*.
+
+This community has become a hub for academics and researchers. It has helped them learn in group studies and discussions with established researchers, such as Dr. Derek Briggs, Dr. Laura Bringmann, Dr. Markus Eronen, Dr. Elina Vessonen, Dr. Stephanie Morris, Dr. James Grice, and Dr. Vithor Franco.
 
 <div class="headers">
 <h1>Join our discussion</h1>
@@ -25,7 +27,7 @@ source(here::here("assets", "calendar.R"))
 
 ```{r reading list}
 as_card(group_name = "Reading list",
-        event_name = "Want to lead a session discussion? Just fill your name and contact info on the corresponding cell. Don't forget to register at the form below.",
+        event_name = "You will find our past and current list of readings. Take a look on what we've been studying.",
         img_src = "images/google_sheets.svg",
         link = 'https://docs.google.com/spreadsheets/d/1SOlgVUkUCKVM9kD9AvtMvqsG6lbsh0Nqj9Kom5eESXw/edit#gid=0'
         )
@@ -33,7 +35,7 @@ as_card(group_name = "Reading list",
 
 ```{r sign up form}
 as_card(group_name = "Sign up",
-        event_name = "If you want to join our live meetings, follow this link to fill the registration form.",
+        event_name = "If you want to join our live meetings and Slack community, follow this link to complete the registration form. You will also find a link to subscribe to receive updates by email.",
         img_src = "images/google_forms.svg",
         link = 'https://forms.gle/WbnrzcdxJZ3Gwf9ZA'
         )
@@ -43,13 +45,15 @@ as_card(group_name = "Sign up",
 <h1>Community</h1>
 </div>
 
-We have a growing community from almost all parts of the world, with different backgrounds. For instance, we are: 
+We have a growing community from almost all parts of the world with different backgrounds. For instance, we are: 
 
   a. both from academia and industry;  
-  b. from undergraduate students to Ph.D.’s;  
+  b. from undergraduate students to Ph.D.s;  
   c. from psychology, education, statistics, mathematics, and many more.
   
-We all have an important interest, to improve our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community, built to have a safe environment to study together, exchange ideas, and collaborate. Please, consider reading our [code of conduct](coc.html).
+We all are interested in improving our area of research by learning and applying measurement theory and psychometrics in our studies. Most importantly, we are an open-arms community built to have a safe environment to study, exchange ideas, and collaborate. Please, consider reading our [code of conduct](coc.html).
+
+In the map below, you'll find the location and affiliation of some of our members.
 
 ```{r map, layout="l-screen-inset"}
 library(leaflet)
@@ -81,6 +85,8 @@ map_data %>%
 <h1>Meetings calendar</h1>
 </div>
 
+2023 agenda to be defined! Stay tuned.
+
 ```{r calendar}
 library(toastui)
 #library(htmltools)
@@ -95,14 +101,14 @@ calendar(view = "month",
 
 ```
 
-Our meetings are recorded and the videos are shared on our Slack channel afterwards.
+Our meetings are recorded, and the videos are shared within the community afterward.
 
 
 <div class="headers">
 <h1>Join our Slack channel</h1>
 </div>
 
-If you are interested in participating in this community, please fill the registration form. We'll send an invitation to the Slack workspace for every registered participant.
+Please complete the registration form if you are interested in participating in this community. We'll send an invitation to the Slack workspace for every registered participant.
 
 <div class="headers">
 <h1>About us</h1>
