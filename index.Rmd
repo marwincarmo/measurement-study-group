@@ -53,7 +53,11 @@ We all have an important interest, to improve our area of research by learning a
 
 ```{r map, layout="l-screen-inset"}
 library(leaflet)
-map_data <- readr::read_csv("assets/map_data_fixed.csv")
+old_map <- readr::read_csv("assets/map_data_fixed.csv")
+new_map <- readr::read_csv("assets/map_data_2023.csv") |> # From participants_database.R
+  dplyr::rename(c(university = affilliation, 
+                  country = country_of_residence))
+map_data <- dplyr::bind_rows(old_map, new_map)
 # calculate center point for setting zoom
 bbox <- ggmap::make_bbox(map_data$longitude, map_data$latitude)
 lon <- sum(bbox[c(1, 3)]) / 2
