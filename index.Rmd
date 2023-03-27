@@ -86,7 +86,18 @@ map_data %>%
 <h1>Meetings calendar</h1>
 </div>
 
-2023 agenda to be defined! Stay tuned.
+- 2023-03-06 - Beyond Statistical Ritual: Theory in Psychological Science  
+- 2023-03-20 - Dr. Liam Satchell: Getting the measurement message out  
+- 2023-04-03 - Dr. Carlos Collares: Applications of Item Response Theory to Psychology  
+- 2023-04-17 - Yago Luksevicius: Ontological diversity in gaming disorder measurement: a nationally representative registered report  
+- 2023-05-01 - To be defined  
+- 2023-05-15 - Dr. James Steele: Can we measure effort in cognitive tasks? Examining the application of Additive Conjoint Measurement and the Rasch model  
+- 2023-05-29 - To be defined  
+- 2023-06-12 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales  
+- 2023-06-26 - Dr. Alexander Christensen:  A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires  
+- 2022-07-10 - Dr. Riet van Bork: A causal theory of error scores  
+- 2023-07-24 - To be defined  
+- 2022-08-07 - To be defined
 
 ```{r calendar}
 library(toastui)
