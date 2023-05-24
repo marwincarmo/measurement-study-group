@@ -86,18 +86,18 @@ map_data %>%
 <h1>Meetings calendar</h1>
 </div>
 
-- 2023-03-06 - Beyond Statistical Ritual: Theory in Psychological Science  
-- 2023-03-20 - Dr. Liam Satchell: Getting the measurement message out  
-- 2023-04-03 - Dr. Carlos Collares: Applications of Item Response Theory to Psychology  
-- 2023-04-17 - Yago Luksevicius: Ontological diversity in gaming disorder measurement: a nationally representative registered report  
-- 2023-05-01 - To be defined  
-- 2023-05-15 - Dr. James Steele: Can we measure effort in cognitive tasks? Examining the application of Additive Conjoint Measurement and the Rasch model  
-- 2023-05-29 - To be defined  
-- 2023-06-12 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales  
+- 2023-03-06 - Beyond Statistical Ritual: Theory in Psychological Science.  
+- 2023-03-20 - Dr. Liam Satchell: Getting the measurement message out.  
+- 2023-04-03 - Dr. Carlos Collares: Applications of Item Response Theory to Psychology.  
+- 2023-04-17 - Yago Luksevicius: Ontological diversity in gaming disorder measurement: a nationally representative registered report.  
+- 2023-05-01 - Maul, A. (2017). Rethinking traditional methods of survey validation.  
+- 2023-05-15 - Dr. James Steele: Can we measure effort in cognitive tasks? Examining the application of Additive Conjoint Measurement and the Rasch model.  
+- 2023-05-29 - Dr. Riet van Bork: A causal theory of error scores.  
+- 2023-06-12 - Dr. Matthias Borgstede and Dr. Frank Eggert: Squaring the circle: From latent variables to theory-based measurement.  
 - 2023-06-26 - Dr. Alexander Christensen:  A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires  
-- 2022-07-10 - Dr. Riet van Bork: A causal theory of error scores  
-- 2023-07-24 - To be defined  
-- 2022-08-07 - To be defined
+- 2022-07-10 - Ben Bolker: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers.  
+- 2023-07-24 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales.  
+- 2022-08-07 - Felipe Vieira: Schimmack, U. (2021). The validation crisis in psychology.
 
 ```{r calendar}
 library(toastui)

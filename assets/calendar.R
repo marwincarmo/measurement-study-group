@@ -21,14 +21,14 @@ titles <- c("Measurement in the Human Sciences w/ Dr. Derek Briggs", "Measuring 
             "Measuring Psychology #21 - Dr. Liam Satchell: Getting the measurement message out",
             "Measuring Psychology #22 - Dr. Carlos Collares: Applications of Item Response Theory to Psychology",
             "Measuring Psychology #23 - Yago Luksevicius: Ontological diversity in gaming disorder measurement: a nationally representative registered report",
-            "Measuring Psychology #24 - To be defined",
+            "Measuring Psychology #24 - Maul, A. (2017). Rethinking traditional methods of survey validation.",
             "Measuring Psychology #25 - Dr. James Steele: Can we measure effort in cognitive tasks? Examining the application of Additive Conjoint Measurement and the Rasch model",
-            "Measuring Psychology #26 - To be defined",
-            "Measuring Psychology #27 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales",
+            "Measuring Psychology #26 - Dr. Riet van Bork: A causal theory of error scores",
+            "Measuring Psychology #27 - Dr. Matthias Borgstede and Dr. Frank Eggert: Squaring the circle: From latent variables to theory-based measurement",
             "Measuring Psychology #28 - Dr. Alexander Christensen:  A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires",
-            "Measuring Psychology #29 - Dr. Riet van Bork: A causal theory of error scores",
-            "Measuring Psychology #30 - To be defined",
-            "Measuring Psychology #31 - To be defined")
+            "Measuring Psychology #29 - Ben Bolker: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers",
+            "Measuring Psychology #30 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales",
+            "Measuring Psychology #31 - Felipe Vieira: Schimmack, U. (2021). The validation crisis in psychology")
 
 start_time <- c(format(Sys.Date(), "2022-02-25 18:00:00"), format(Sys.Date(), "%Y-03-11 18:00:00"),
                 format(Sys.Date(), "2022-03-25 18:00:00"), format(Sys.Date(), "2022-04-08 18:00:00"),
