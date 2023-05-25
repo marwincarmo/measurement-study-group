@@ -95,7 +95,7 @@ map_data %>%
 - 2023-05-29 - Dr. Riet van Bork: A causal theory of error scores.  
 - 2023-06-12 - Dr. Matthias Borgstede and Dr. Frank Eggert: Squaring the circle: From latent variables to theory-based measurement.  
 - 2023-06-26 - Dr. Alexander Christensen:  A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires  
-- 2022-07-10 - Ben Bolker: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers.  
+- 2022-07-10 - Ben Giber: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers.  
 - 2023-07-24 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales.  
 - 2022-08-07 - Felipe Vieira: Schimmack, U. (2021). The validation crisis in psychology.
 

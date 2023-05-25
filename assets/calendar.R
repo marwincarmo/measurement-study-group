@@ -26,7 +26,7 @@ titles <- c("Measurement in the Human Sciences w/ Dr. Derek Briggs", "Measuring 
             "Measuring Psychology #26 - Dr. Riet van Bork: A causal theory of error scores",
             "Measuring Psychology #27 - Dr. Matthias Borgstede and Dr. Frank Eggert: Squaring the circle: From latent variables to theory-based measurement",
             "Measuring Psychology #28 - Dr. Alexander Christensen:  A Psychometric Network Perspective on the Validity and Validation of Personality Trait Questionnaires",
-            "Measuring Psychology #29 - Ben Bolker: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers",
+            "Measuring Psychology #29 - Ben Giber: Lord, F. M. (1953). On the statistical treatment of football numbers + Scholten, A. Z., & Borsboom, D. (2009). A reanalysis of Lord’s statistical treatment of football numbers",
             "Measuring Psychology #30 - Claudia Bucheweitz: A comparative contrast of clinimetric and psychometric methods for constructing indexes and rating scales",
             "Measuring Psychology #31 - Felipe Vieira: Schimmack, U. (2021). The validation crisis in psychology")
 
